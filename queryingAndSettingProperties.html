@@ -1,0 +1,36 @@
+<html>
+<head><title>Querying and Setting Properties</title></head>
+    <body>
+        <div>
+            <h3>Querying and Setting Properties</h3>
+            <p>To obtain the value of a property, use the dot(.) or square bracket([]) operators. The left hand side should be an expression whose value in an object. If using the dot operator, the right hand must be a simple indentifier that name the property. If using square bracket, the value within the brackets must be an expression that evaluetes to a string that contains the desired property name</p>
+            <p>
+                var author = book.author // Get the "author" property of the book.m<br/>
+        var title=book["main title"] // Get the "main title" property of the book.
+                <br/>
+            </p>
+            <p>To create or set property, use a dot or square brackets as you would to qery the property, but put them on the left-hand side of an assignment expression:</p>
+            <p>
+            book.edition = 6; // create an "edition" property of book.
+            <br/>
+                
+    book["main title"] = "ECMAScript"; // set the "main title" property.
+            </p>
+            
+            <p>
+                The identifier that foollows the dot operator cannot be reserved word: you cannot write o.for or o.class, for example, becuase for is a language keyword. and class is reserved for future use. If an object has properties whose name is a reserved word. you must use squear bracket notation to access them: o["for"]. When using square bracket notation we've said the expression  inside the square bracket must evaluate to string.
+            </p>
+            
+        
+        </div>
+        
+        <div>
+            <h3>Objects As Associative Arrays</h3>
+            <p>As explained above, the following two javaScript expression have the same value:<br>object.property<br>object.["property"]</p>
+            <p>The first syntax using the dot and  an identifier, is like the syntx used to access a static field of as struct or object in c or Java. The second syntax , using square brackets and a string. looks like array accesss, but to an array indexed by string srather than by numbers. This kind of array is know as an associative array</p>
+            <P>
+            In C, C++, java, and similar strongly typed language , an object can have only a fixed number of properties, and the name of these properties must be defined in advance. Since JavaScript is a loosley typed language , this rule does not apply: a program can create any number of properties in any object. When you use the dot operator to access  a property of an object howerver , the name of the property is expresssed as an identifire. Identifires must be typed literally into your JavaScrupt program; they are not a datatype, so they cannot be manuiplate by the program.
+            </P>
+        </div>
+    </body>
+</html>

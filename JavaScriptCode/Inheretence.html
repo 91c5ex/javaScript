@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>
+        Inheretence
+    </title>
+
+    <script>
+        function inherit(p) {
+            if (p == null) throw TypeError
+
+            if (!Object.create) {
+                return Object.create(p)
+            }
+
+            var t = typeof p;
+            if (t !== "object" && t !== "function") throw TypeError
+
+            function f() {};
+            f.prototype = p;
+            return new f();
+        }
+
+
+
+        var unitcircel = {
+            r: 1
+        };
+        console.log("unitcircle is ", unitcircel);
+        var c = inherit(unitcircel);
+        console.log("C circle is ", c);
+        c.x = 1;
+        c.y = 1;
+        c.r = 2;
+
+        console.log("c.r is ", c.r);
+
+        unitcircel.r;
+
+        console.log("unitcircel.r is ", unitcircel.r);
+    </script>
+
+</head>
+
+<body>
+    hi there checking inheretence.
+
+    <p>
+        Property assignment examines  the prototype chain  to determine  whether  the assignment  is allowed . If o inherits a read-only  property  named x , for example  , then the  assignment  is not allowed . if the assinment is allowed, however it always create or sets a property  in the orignal object and never modified the propert chain . JavaScript selectively override the inherited property.
+    </p>
+            There is one exception to the rule  that a property  assignment  either fails or creates or  sets a property  in the orignal object. If o  inherts the property x  and that property  is asscessor property  with a setter  method, than the setter method is called rather than creating a new property x in o , <strong>Note</strong> the setter method is called  on the  object  o , not  on the prototype object that defines the property , so if the setter method `defines any property , it will  do so  on o,  and it again leave the prototype chain unmodified.
+    
+    </p>
+</body>
+
+</html>

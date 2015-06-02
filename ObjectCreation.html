@@ -1,0 +1,45 @@
+<html>
+    <head><title>Object creation</title></head>
+    
+    <body>
+        <div>
+            <h2>Creatin Objects</h2>
+            
+            <p>
+                Objects can be created with object literals. with the new keywords, and with Object.create() function.
+            </p>
+            
+            <h3>Object Literals</h3>
+            <p> An Object literal is a comma-separated list of colon-separeated name:value pair enclosed with curly brackets.<br/>
+            An Object literal is an exprssion that creates and initializes a new and distinct object each time it is evaluates. The value of each property is evaluated each time the literal is evaluated. This means that a single object literal ca create many new Objects if it appears within the body of a loop in a functin that is called repeatedly, and that the property values of these objects may differ from each other.
+            </p>
+            
+            <h3>Creating Objects with new</h3>
+    <p>The new Operator creates and initializes a new Object. The new keyword must be followed by a function invocation. A function used in this way is called a <em>constructor</em> and <em>servers</em> to initialize a newly created Object. </p>
+            
+            <h3>Prototype</h3>
+            <p>Every JavaScript object has  a second JavaScript Object(or null but this. is rare) associated with it. This second object is known as a prototype, and the first object inherits properties from the prototype</p>
+            <p>
+            All objects created by object literals have the same prototype object , and we can refer to this prototype object in JavaScript code as Object.prototype. Objects created using the new keyword and a constructor invocation use the value of the prototype property of the constructor function as their prototype, so the object create using new Object() inherits from Object.prototype juast as the object created by {} does.Similarly, the object created by new Array() uses Array.prototype as its prototype, and the object created by new Date() uses Date.prototype as its prototype.
+            </p>
+            
+            <p>Object.prototype is one of the rare object that has no prototype. it does not inherit and properties. The linked series of prototype objects is known as a prototype chain.</p>
+        </div>
+        
+        <div>
+            <h3>Object.create()</h3>
+            
+            <p>ECMAScript 5 defines a method , Object.create() , that creates a new object, using its first argument as the prototype of that object. Object.create() also takes an option second argrument that describes  the properties of the new object.</p>
+            <p><strong>Object.create()</strong> is a static function , not a method invokec on individual objects. To use it, smply pass the desired prototype object:<br/>
+    var o1 = Object.create({x:1, y:2}) // 01 inherits properties x and y;
+                <br/>
+You can pass <strong>null</strong> to create a new Object that does not have a prototype, but if you do this, the newly created Object will not inherit anything , not even basice method like toString() (Which means it won't  work with the + operator either)
+                <br/>
+    var o2 = Object.create(null)    // o2 inherits no props or method.
+            </p>
+            
+        </div>
+        
+    </body>
+    
+</html>

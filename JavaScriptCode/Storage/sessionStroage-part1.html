@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+    <head>
+       <title>
+            Html 5 Storage
+        </title>
+    </head>
+    
+    <body>
+        
+        <script type="application/javascript">
+            
+            console.log("session Hits are ",sessionStorage);
+            
+            if(sessionStorage.hits)
+            {
+                console.log("session Hits are ",sessionStorage.hits);
+                sessionStorage.hits = Number(sessionStorage.hits)+1;
+            }
+            else{
+                sessionStorage.hits = 1;
+                
+                console.log("First Time setting hits ",sessionStorage.hits);
+            }
+            
+            document.write("Session Storage Hits "+sessionStorage.hits);
+            
+            
+            
+        </script>
+        
+        <p>Refresh the page to increase the number of hits</p>
+        <p>Close the Window and open it again and check the result</p>
+    </body>
+    
+</html>

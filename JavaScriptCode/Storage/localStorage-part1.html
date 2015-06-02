@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>
+        local Storage
+    </title>
+    
+    
+</head>
+
+    <body>
+        <script type="application/javascript">
+        
+            if(localStorage.hits){
+                localStorage.hits    = Number(localStorage.hits) +1;
+            }
+            else{
+                localStorage.hits = 1;
+            }
+            
+            document.write(" Total Hits are " +localStorage.hits);
+            
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+    <title>Primitive Type</title>
+    </head>
+    
+    <body>
+            <div>
+                <h3>Numbers.</h3>
+                <p>JavaScript doesnot make and distinction between the integer type and the floating type.All number in javascript are treated as floating-point. JavaScript represent number using the 64 bit floating point number.Certain operations (such as arrayIndexing and bitwise operation) in javascript are performed as 32 bit operators </p>
+                <p>When number appear directly in javascript it's  called a numeric literal</p>
+                <h2>Floating-Point Literal</h2>
+                <p>Floating-Point Literal can have a decimal point. They uses the synatx of the real number. A real value is represented as the integral part of number, followed by an decimal part and the frational part of the number.</p>
+                <p>Floating point literal may also be represented  using the  exponential notation. a real number  followed  by the letter e(or E), followed by option plus and minus</p>
+                
+                <h2>Arithmetic in JavaScript</h2>
+                <p>JavaScript works with the number using the Arithmetic operator the language provide.These include<br/>
+                <ul>
+                    <li>+ for addition.</li>    
+                    <li>- for substraction</li>
+                    <li>* for multiplication</li>
+                    <li>/ for division</li>
+                    <li>% for module</li>
+                </ul>
+                </p>
+               <div>
+             <p>
+                Math Object provide more complex math operations.
+                    Arithmethic in JavaScript do not raise. error in case of overflow, underflow,  or division by zero.When the result of the numeric operation is larger the largest represntable number (overflow), the result is a specifice infinite value.Which java print as <strong>Infinity</strong>. Similiary when the negative value became larger the largest representable negative value JavaScript print it as <strong>Infinity</strong>.
+                </p>
+                   
+                   <p>Underflow occur When the result of a numeric operation is closer to zero than the smallest representable  number. In this case JavaScript return 0. If underflow occures from a negative number, JavaScript return a special  value known as "negative zero" This value is almost completely indistingusible from a regular zero and JavaScript programmers rarely need to detect it.</p>
+                   <p>
+                            Divison  by zero is not an error in JavaScript. It simply return  infinity or negative infinity. There is a one exception zero divided by zero does not have a well defined  value. and the result is the special not-a-number printed as   NaN. aslo arises when we divde infinity by infinity.
+                       JavaScript predefines global variable <strong>Infinity</strong>
+and <strong>NaN</strong> to hold the positive infinity and  not-a-number value. In ECMAScirpt 3 , these are read/wirte values and can be changed ECMAScirpt 5 corrects  this and make the read only                   </p>
+                   
+                   <p>The not-a-number value has one unusual feature in JavaScript : it does not  compare equal to  other value including itself. This meant that you can't write x==NaN to deter mine  whether the value of the variable  x is NaN instead you should write x!=x That expression  will be ture if , and only if x is NaN. The function isNaN() is similar. It return ture if its argument is NaN, of if that argument is a non-numeirc value  such as a string or an object.The releated function function is  isFinite() return true if its agrument  is a  number other than NaN, Infinity or ~ Infinity . Also -0 and 0 are equal but Infinity and -Infinity are not equal</p>
+        </div>
+        </div>
+    </body>
+    
+</html>
